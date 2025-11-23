@@ -3,164 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품기획&PM 포트폴리오</title>
-    <!-- Chosen Palette: Professional Blues & Accent -->
-    <!-- Application Structure Plan: A top-down narrative infographic. It starts with a high-impact hero section with key metrics (KPIs) to immediately establish credibility. This is followed by a vertical timeline to intuitively display career progression. Key projects are presented in a card layout for detailed review, and core competencies are visualized with donut charts for a quick, digestible summary of skills. This structure tells a compelling story from broad impact to specific skills, guiding the user logically through the candidate's professional journey. -->
-    <!-- Visualization & Content Choices: 1. Key Metrics (Stores, Users) -> Goal: Inform -> Viz: Single Big Number -> Interaction: None -> Justification: Most direct way to show impressive, quantifiable achievements. -> Method: HTML/Tailwind. 2. Career History -> Goal: Change -> Viz: Vertical Timeline -> Interaction: None -> Justification: Clearly shows career progression over time in a visually engaging format. -> Method: HTML/CSS/Tailwind. 3. Core Competencies -> Goal: Compare/Inform -> Viz: Donut Charts -> Interaction: Hover for tooltips -> Justification: Visually separates and emphasizes the three main areas of expertise. -> Library: Chart.js (Canvas). -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f8f9fa;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -31px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #0d6efd;
-            border: 4px solid #ffffff;
-        }
-        .hero-banner {
-            background-image: url('top.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 300px; /* Adjust height as needed */
-        }
-    </style>
+    <title>Portfolio | Product Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="text-gray-800">
-
-    <div class="hero-banner"></div>
-
-    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
-
-        <header class="text-center py-12">
-            <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-2">상품기획 및 PM 포트폴리오</h1>
-            <p class="text-lg text-blue-700 font-bold">12 Years of Product Leadership at Golfzon Group</p>
-        </header>
-
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold text-center mb-10">주요 성과 지표</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <p class="text-5xl font-extrabold text-blue-700">12년</p>
-                    <p class="text-gray-600 mt-2 font-medium">총 경력</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <p class="text-5xl font-extrabold text-blue-700">100개</p>
-                    <p class="text-gray-600 mt-2 font-medium">직영 매장 시스템 구축</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <p class="text-5xl font-extrabold text-blue-700">4만+</p>
-                    <p class="text-gray-600 mt-2 font-medium">운영 플랫폼 회원</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <p class="text-5xl font-extrabold text-blue-700">20만</p>
-                    <p class="text-gray-600 mt-2 font-medium">월간 활성 사용자(MAU)</p>
-                </div>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PM.Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold text-center mb-12">경력 타임라인</h2>
-            <div class="relative border-l-4 border-blue-500 ml-4 md:ml-0">
-                <div class="timeline-item mb-12 ml-10">
-                    <h3 class="text-xl font-bold text-blue-800">GDR 신규사업 및 상품기획 PM</h3>
-                    <p class="text-sm font-medium text-gray-500 mb-3">2018.07 - 현재</p>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <p>직영 인프라 시스템 구축, 구독형 서비스 'GDR PRIME' 기획 및 론칭, High-End 스윙 분석기 상품화 등 핵심 프로젝트를 총괄하며 사업 성장을 주도했습니다.</p>
-                    </div>
-                </div>
-                <div class="timeline-item mb-12 ml-10">
-                    <h3 class="text-xl font-bold text-blue-800">신규사업 서비스 기획 및 마케팅</h3>
-                    <p class="text-sm font-medium text-gray-500 mb-3">2015.07 - 2018.06</p>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <p>가맹 전용 'TWOVISION' 제품 론칭 및 운영을 담당했으며, 광고, PPL 등 마케팅 전략을 통해 가맹점의 신규 수익 창출에 기여했습니다.</p>
-                    </div>
-                </div>
-                <div class="timeline-item ml-10">
-                    <h3 class="text-xl font-bold text-blue-800">골프 시뮬레이터 품질관리</h3>
-                    <p class="text-sm font-medium text-gray-500 mb-3">2013.07 - 2015.06</p>
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <p>Real/Vision 제품의 Client QA를 리딩하며 Usecase 기반 테스트를 통해 제품 품질을 개선하고 서비스 안정화에 기여했습니다.</p>
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="subtitle">Product Manager & Strategist</span>
+            <h1 id="hero-name">Name</h1>
+            <p id="hero-tagline">Tagline goes here.</p>
+            <div class="hero-btns">
+                <a href="#experience" class="btn btn-primary">View Experience</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-bg-element"></div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-desc">Description</p>
+                    <div class="skills-container" id="skills-list">
+                        <!-- Skills injected here -->
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold text-center mb-12">핵심 역량</h2>
-             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">지난 12년간의 경험을 통해 프로덕트 관리, 상품 기획, 글로벌 전략 수립에 이르는 다각적인 역량을 구축했습니다. 각 역량은 실제 프로젝트 성공 사례를 통해 입증되었습니다.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h3 class="text-xl font-bold mb-4">프로덕트 매니저 (PM)</h3>
-                    <div class="chart-container h-48 w-48 mx-auto">
-                        <canvas id="pmChart"></canvas>
-                    </div>
-                    <p class="mt-4 text-gray-600">대규모 시스템 구축 및 구독 서비스 도입 등 복잡한 프로젝트를 성공적으로 관리합니다.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h3 class="text-xl font-bold mb-4">상품기획 및 마케팅</h3>
-                    <div class="chart-container h-48 w-48 mx-auto">
-                        <canvas id="planningChart"></canvas>
-                    </div>
-                     <p class="mt-4 text-gray-600">데이터 기반 분석을 통해 사용자 중심의 제품을 설계하고 시장에 성공적으로 출시합니다.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-                    <h3 class="text-xl font-bold mb-4">글로벌 시장 대응</h3>
-                    <div class="chart-container h-48 w-48 mx-auto">
-                        <canvas id="globalChart"></canvas>
-                    </div>
-                     <p class="mt-4 text-gray-600">해외 법인 및 협력사와의 협업을 통해 글로벌 상품 기획과 현지화를 수행합니다.</p>
-                </div>
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline" id="experience-list">
+                <!-- Experience items injected here -->
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="text-center py-8 border-t">
-            <p class="text-gray-600">your-email@example.com | 010-1234-5678</p>
-        </footer>
-    </div>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-grid" id="projects-list">
+                <!-- Projects injected here -->
+            </div>
+        </div>
+    </section>
 
-    <script>
-        const chartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: '70%',
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    enabled: false
-                }
-            }
-        };
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>새로운 기회와 협업에 대해 언제든 열려있습니다.</p>
+                <div class="social-links" id="social-links">
+                    <!-- Social links injected here -->
+                </div>
+                <p class="copyright">© 2025 Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-        const createChart = (ctx, label, data, color) => {
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: [label, ''],
-                    datasets: [{
-                        data: data,
-                        backgroundColor: [color, '#e9ecef'],
-                        borderColor: ['#ffffff', '#ffffff'],
-                        borderWidth: 2
-                    }]
-                },
-                options: chartOptions
-            });
-        };
-
-        createChart(document.getElementById('pmChart').getContext('2d'), 'PM', [95, 5], '#0d6efd');
-        createChart(document.getElementById('planningChart').getContext('2d'), 'Planning', [90, 10], '#198754');
-        createChart(document.getElementById('globalChart').getContext('2d'), 'Global', [85, 15], '#ffc107');
-    </script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
